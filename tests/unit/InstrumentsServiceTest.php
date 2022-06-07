@@ -10,10 +10,13 @@ use rocketfellows\TinkoffInvestV1RestClient\Client;
 
 abstract class InstrumentsServiceTest extends TestCase
 {
+    private const ACTUAL_SERVICE_NAME = 'InstrumentsService';
+    private const EXPECTED_RESPONSE = ['foo'];
+
     /**
      * @var InstrumentsService
      */
-    private $instrumentsService;
+    protected $instrumentsService;
 
     /**
      * @var Client|MockObject
@@ -29,23 +32,23 @@ abstract class InstrumentsServiceTest extends TestCase
         $this->instrumentsService = new InstrumentsService($this->client);
     }
 
-    abstract public function testMethodRequest(): void;
+    public function testMethodRequest(): void
+    {
+        $actualResponse = $this->prepareServiceMethodCallAssertions(self::EXPECTED_RESPONSE);
 
-    protected function assertClientRequestWithParams(
-        string $serviceName,
-        string $serviceMethod,
-        array $params,
-        ?array $response = []
-    ): void {
-        $this->assertClientRequest($response)->with($serviceName, $serviceMethod, $params);
+        $this->assertEquals(self::EXPECTED_RESPONSE, $actualResponse);
     }
 
-    protected function assertClientRequestWithoutParams(
-        string $serviceName,
-        string $serviceMethod,
-        ?array $response = []
-    ): void {
-        $this->assertClientRequest($response)->with($serviceName, $serviceMethod);
+    abstract protected function prepareServiceMethodCallAssertions(array $expectedResponse): array;
+
+    protected function assertClientRequestWithParams(string $serviceMethod, array $params, ?array $response = []): void
+    {
+        $this->assertClientRequest($response)->with(self::ACTUAL_SERVICE_NAME, $serviceMethod, $params);
+    }
+
+    protected function assertClientRequestWithoutParams(string $serviceMethod, ?array $response = []): void
+    {
+        $this->assertClientRequest($response)->with(self::ACTUAL_SERVICE_NAME, $serviceMethod);
     }
 
     private function assertClientRequest(?array $response = []): InvocationMocker
