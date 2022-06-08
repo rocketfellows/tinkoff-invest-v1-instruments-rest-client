@@ -42,7 +42,7 @@ abstract class InstrumentsServiceTest extends TestCase
     }
 
     abstract protected function prepareServiceMethodCallAssertions(array $expectedResponse): array;
-    abstract protected function getExpectedInterfacesImplementations():array;
+    abstract protected function getExpectedInterfacesImplementations(): array;
 
     protected function assertClientRequestWithParams(string $serviceMethod, array $params, ?array $response = []): void
     {
