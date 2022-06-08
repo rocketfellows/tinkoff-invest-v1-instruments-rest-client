@@ -10,13 +10,15 @@ use rocketfellows\TinkoffInvestV1RestClient\exceptions\request\ServerException;
 class InstrumentsService implements
     GetDividendsInterface,
     GetCountriesInterface,
-    GetBondCouponsInterface
+    GetBondCouponsInterface,
+    GetAssetsInterface
 {
     private const SERVICE_NAME = 'InstrumentsService';
 
     private const SERVICE_METHOD_NAME_GET_DIVIDENDS = 'GetDividends';
     private const SERVICE_METHOD_NAME_GET_COUNTRIES = 'GetCountries';
     private const SERVICE_METHOD_NAME_GET_BOND_COUPONS = 'GetBondCoupons';
+    private const SERVICE_METHOD_NAME_GET_ASSETS = 'GetAssets';
 
     private $client;
 
@@ -64,6 +66,14 @@ class InstrumentsService implements
             self::SERVICE_NAME,
             self::SERVICE_METHOD_NAME_GET_BOND_COUPONS,
             $params
+        );
+    }
+
+    public function getAssets(): array
+    {
+        return $this->client->request(
+            self::SERVICE_NAME,
+            self::SERVICE_METHOD_NAME_GET_ASSETS
         );
     }
 }
