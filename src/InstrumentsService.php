@@ -36,11 +36,7 @@ class InstrumentsService implements
      */
     public function getDividends(array $params): array
     {
-        return $this->client->request(
-            self::SERVICE_NAME,
-            self::SERVICE_METHOD_NAME_GET_DIVIDENDS,
-            $params
-        );
+        return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_DIVIDENDS, $params);
     }
 
     /**
@@ -50,10 +46,7 @@ class InstrumentsService implements
      */
     public function getCountries(): array
     {
-        return $this->client->request(
-            self::SERVICE_NAME,
-            self::SERVICE_METHOD_NAME_GET_COUNTRIES
-        );
+        return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_COUNTRIES);
     }
 
     /**
@@ -63,11 +56,7 @@ class InstrumentsService implements
      */
     public function getBondCoupons(array $params): array
     {
-        return $this->client->request(
-            self::SERVICE_NAME,
-            self::SERVICE_METHOD_NAME_GET_BOND_COUPONS,
-            $params
-        );
+        return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_BOND_COUPONS, $params);
     }
 
     /**
@@ -77,10 +66,7 @@ class InstrumentsService implements
      */
     public function getAssets(): array
     {
-        return $this->client->request(
-            self::SERVICE_NAME,
-            self::SERVICE_METHOD_NAME_GET_ASSETS
-        );
+        return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_ASSETS);
     }
 
     /**
@@ -90,9 +76,19 @@ class InstrumentsService implements
      */
     public function findInstrument(array $params): array
     {
+        return $this->requestMethod(self::SERVICE_METHOD_NAME_FIND_INSTRUMENT, $params);
+    }
+
+    /**
+     * @throws ClientException
+     * @throws ServerException
+     * @throws HttpClientException
+     */
+    private function requestMethod(string $methodName, ?array $params = null): array
+    {
         return $this->client->request(
             self::SERVICE_NAME,
-            self::SERVICE_METHOD_NAME_FIND_INSTRUMENT,
+            $methodName,
             $params
         );
     }
