@@ -17,6 +17,8 @@ class GetBondCouponsTest extends InstrumentsServiceTest
 
     protected function getExpectedInterfacesImplementations(): array
     {
-        return [GetBondCouponsInterface::class];
+        return [
+            GetBondCouponsInterface::class,
+        ];
     }
 }
