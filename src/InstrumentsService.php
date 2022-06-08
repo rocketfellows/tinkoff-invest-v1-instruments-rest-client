@@ -52,8 +52,7 @@ class InstrumentsService implements
     {
         return $this->client->request(
             self::SERVICE_NAME,
-            self::SERVICE_METHOD_NAME_GET_COUNTRIES,
-            []
+            self::SERVICE_METHOD_NAME_GET_COUNTRIES
         );
     }
 
