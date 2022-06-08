@@ -34,12 +34,15 @@ abstract class InstrumentsServiceTest extends TestCase
 
     public function testMethodRequest(): void
     {
+        $this->assertImplementedInterfaces($this->instrumentsService, $this->getExpectedInterfacesImplementations());
+
         $actualResponse = $this->prepareServiceMethodCallAssertions(self::EXPECTED_RESPONSE);
 
         $this->assertEquals(self::EXPECTED_RESPONSE, $actualResponse);
     }
 
     abstract protected function prepareServiceMethodCallAssertions(array $expectedResponse): array;
+    abstract protected function getExpectedInterfacesImplementations():array;
 
     protected function assertClientRequestWithParams(string $serviceMethod, array $params, ?array $response = []): void
     {
@@ -57,5 +60,18 @@ abstract class InstrumentsServiceTest extends TestCase
             ->expects($this->once())
             ->method('request')
             ->willReturn($response);
+    }
+
+    protected function assertImplementedInterfaces(object $instance, array $expectedInterfaces): void
+    {
+        $actualInterfaceImplementations = class_implements(get_class($instance));
+
+        foreach ($expectedInterfaces as $implementedInterface) {
+            $this->assertArrayHasKey(
+                $implementedInterface,
+                $actualInterfaceImplementations,
+                sprintf('Implementation of %s not fount', $implementedInterface)
+            );
+        }
     }
 }
