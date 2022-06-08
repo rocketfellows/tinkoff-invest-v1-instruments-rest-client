@@ -11,7 +11,8 @@ class InstrumentsService implements
     GetDividendsInterface,
     GetCountriesInterface,
     GetBondCouponsInterface,
-    GetAssetsInterface
+    GetAssetsInterface,
+    FindInstrumentInterface
 {
     private const SERVICE_NAME = 'InstrumentsService';
 
@@ -19,6 +20,7 @@ class InstrumentsService implements
     private const SERVICE_METHOD_NAME_GET_COUNTRIES = 'GetCountries';
     private const SERVICE_METHOD_NAME_GET_BOND_COUPONS = 'GetBondCoupons';
     private const SERVICE_METHOD_NAME_GET_ASSETS = 'GetAssets';
+    private const SERVICE_METHOD_NAME_FIND_INSTRUMENT = 'FindInstrument';
 
     private $client;
 
@@ -79,6 +81,20 @@ class InstrumentsService implements
         return $this->client->request(
             self::SERVICE_NAME,
             self::SERVICE_METHOD_NAME_GET_ASSETS
+        );
+    }
+
+    /**
+     * @throws ClientException
+     * @throws ServerException
+     * @throws HttpClientException
+     */
+    public function findInstrument(array $params): array
+    {
+        return $this->client->request(
+            self::SERVICE_NAME,
+            self::SERVICE_METHOD_NAME_FIND_INSTRUMENT,
+            $params
         );
     }
 }
