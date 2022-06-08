@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1654635776">
-  <project timestamp="1654635776">
+<coverage generated="1654638379">
+  <project timestamp="1654638379">
+    <file name="/app/src/GetCountriesInterface.php">
+      <metrics loc="9" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
     <file name="/app/src/GetDividendsInterface.php">
       <metrics loc="9" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="/app/src/InstrumentsService.php">
       <class name="rocketfellows\TinkoffInvestV1InstrumentsRestClient\InstrumentsService" namespace="global">
-        <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
       </class>
-      <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="20" type="stmt" count="1"/>
-      <line num="28" type="method" name="getDividends" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="30" type="stmt" count="1"/>
-      <metrics loc="37" ncloc="32" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="23" type="stmt" count="2"/>
+      <line num="31" type="method" name="getDividends" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="45" type="method" name="getCountries" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="47" type="stmt" count="1"/>
+      <line num="50" type="stmt" count="1"/>
+      <metrics loc="54" ncloc="44" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
     </file>
-    <metrics files="2" loc="46" ncloc="41" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+    <metrics files="3" loc="72" ncloc="62" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
   </project>
 </coverage>
