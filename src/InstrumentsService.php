@@ -69,6 +69,11 @@ class InstrumentsService implements
         );
     }
 
+    /**
+     * @throws ClientException
+     * @throws HttpClientException
+     * @throws ServerException
+     */
     public function getAssets(): array
     {
         return $this->client->request(
