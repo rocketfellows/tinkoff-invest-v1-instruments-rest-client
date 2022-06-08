@@ -2,6 +2,8 @@
 
 namespace rocketfellows\TinkoffInvestV1InstrumentsRestClient\tests\unit;
 
+use rocketfellows\TinkoffInvestV1InstrumentsRestClient\GetDividendsInterface;
+
 /**
  * @group methods
  */
@@ -14,5 +16,12 @@ class GetDividendsTest extends InstrumentsServiceTest
         $this->assertClientRequestWithParams('GetDividends', self::PARAMS, $expectedResponse);
 
         return $this->instrumentsService->getDividends(self::PARAMS);
+    }
+
+    protected function getExpectedInterfacesImplementations(): array
+    {
+        return [
+            GetDividendsInterface::class,
+        ];
     }
 }

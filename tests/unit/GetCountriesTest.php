@@ -2,6 +2,8 @@
 
 namespace rocketfellows\TinkoffInvestV1InstrumentsRestClient\tests\unit;
 
+use rocketfellows\TinkoffInvestV1InstrumentsRestClient\GetCountriesInterface;
+
 /**
  * @group methods
  */
@@ -12,5 +14,12 @@ class GetCountriesTest extends InstrumentsServiceTest
         $this->assertClientRequestWithoutParams('GetCountries', $expectedResponse);
 
         return $this->instrumentsService->getCountries();
+    }
+
+    protected function getExpectedInterfacesImplementations(): array
+    {
+        return [
+            GetCountriesInterface::class,
+        ];
     }
 }
