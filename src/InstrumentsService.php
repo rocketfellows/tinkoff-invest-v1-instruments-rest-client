@@ -69,11 +69,6 @@ class InstrumentsService implements
         return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_ASSETS);
     }
 
-    /**
-     * @throws ClientException
-     * @throws ServerException
-     * @throws HttpClientException
-     */
     public function findInstrument(array $params): array
     {
         return $this->requestMethod(self::SERVICE_METHOD_NAME_FIND_INSTRUMENT, $params);
