@@ -3,9 +3,6 @@
 namespace rocketfellows\TinkoffInvestV1InstrumentsRestClient;
 
 use rocketfellows\TinkoffInvestV1RestClient\Client;
-use rocketfellows\TinkoffInvestV1RestClient\exceptions\request\ClientException;
-use rocketfellows\TinkoffInvestV1RestClient\exceptions\request\HttpClientException;
-use rocketfellows\TinkoffInvestV1RestClient\exceptions\request\ServerException;
 
 class InstrumentsService implements
     GetDividendsInterface,
@@ -29,41 +26,21 @@ class InstrumentsService implements
         $this->client = $client;
     }
 
-    /**
-     * @throws ClientException
-     * @throws HttpClientException
-     * @throws ServerException
-     */
     public function getDividends(array $params): array
     {
         return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_DIVIDENDS, $params);
     }
 
-    /**
-     * @throws ClientException
-     * @throws HttpClientException
-     * @throws ServerException
-     */
     public function getCountries(): array
     {
         return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_COUNTRIES);
     }
 
-    /**
-     * @throws ClientException
-     * @throws HttpClientException
-     * @throws ServerException
-     */
     public function getBondCoupons(array $params): array
     {
         return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_BOND_COUPONS, $params);
     }
 
-    /**
-     * @throws ClientException
-     * @throws HttpClientException
-     * @throws ServerException
-     */
     public function getAssets(): array
     {
         return $this->requestMethod(self::SERVICE_METHOD_NAME_GET_ASSETS);
@@ -74,11 +51,6 @@ class InstrumentsService implements
         return $this->requestMethod(self::SERVICE_METHOD_NAME_FIND_INSTRUMENT, $params);
     }
 
-    /**
-     * @throws ClientException
-     * @throws ServerException
-     * @throws HttpClientException
-     */
     private function requestMethod(string $methodName, ?array $params = null): array
     {
         return $this->client->request(
