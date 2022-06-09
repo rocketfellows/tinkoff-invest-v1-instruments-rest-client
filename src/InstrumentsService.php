@@ -3,13 +3,17 @@
 namespace rocketfellows\TinkoffInvestV1InstrumentsRestClient;
 
 use rocketfellows\TinkoffInvestV1RestClient\Client;
+use rocketfellows\TinkoffInvestV1RestClient\exceptions\request\ClientException;
+use rocketfellows\TinkoffInvestV1RestClient\exceptions\request\HttpClientException;
+use rocketfellows\TinkoffInvestV1RestClient\exceptions\request\ServerException;
 
 class InstrumentsService implements
     GetDividendsInterface,
     GetCountriesInterface,
     GetBondCouponsInterface,
     GetAssetsInterface,
-    FindInstrumentInterface
+    FindInstrumentInterface,
+    BondByInterface
 {
     private const SERVICE_NAME = 'InstrumentsService';
 
@@ -18,6 +22,7 @@ class InstrumentsService implements
     private const SERVICE_METHOD_NAME_GET_BOND_COUPONS = 'GetBondCoupons';
     private const SERVICE_METHOD_NAME_GET_ASSETS = 'GetAssets';
     private const SERVICE_METHOD_NAME_FIND_INSTRUMENT = 'FindInstrument';
+    private const SERVICE_METHOD_NAME_BOND_BY = 'BondBy';
 
     private $client;
 
@@ -49,6 +54,11 @@ class InstrumentsService implements
     public function findInstrument(array $params): array
     {
         return $this->requestMethod(self::SERVICE_METHOD_NAME_FIND_INSTRUMENT, $params);
+    }
+
+    public function bondBy(array $params): array
+    {
+        return $this->requestMethod(self::SERVICE_METHOD_NAME_BOND_BY, $params);
     }
 
     private function requestMethod(string $methodName, ?array $params = null): array
