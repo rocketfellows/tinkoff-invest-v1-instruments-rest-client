@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1654812872">
-  <project timestamp="1654812872">
+<coverage generated="1654895035">
+  <project timestamp="1654895035">
     <file name="/app/src/BondByInterface.php">
       <metrics loc="18" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
@@ -23,24 +23,24 @@
       <class name="rocketfellows\TinkoffInvestV1InstrumentsRestClient\InstrumentsService" namespace="global">
         <metrics complexity="8" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="16" coveredelements="16"/>
       </class>
-      <line num="29" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
-      <line num="31" type="stmt" count="6"/>
-      <line num="34" type="method" name="getDividends" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="36" type="stmt" count="1"/>
-      <line num="39" type="method" name="getCountries" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="41" type="stmt" count="1"/>
-      <line num="44" type="method" name="getBondCoupons" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="46" type="stmt" count="1"/>
-      <line num="49" type="method" name="getAssets" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="51" type="stmt" count="1"/>
-      <line num="54" type="method" name="findInstrument" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="56" type="stmt" count="1"/>
-      <line num="59" type="method" name="bondBy" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="61" type="stmt" count="1"/>
-      <line num="64" type="method" name="requestMethod" visibility="private" complexity="1" crap="1" count="6"/>
-      <line num="66" type="stmt" count="6"/>
-      <metrics loc="73" ncloc="73" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="16" coveredelements="16"/>
+      <line num="26" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
+      <line num="28" type="stmt" count="6"/>
+      <line num="31" type="method" name="getDividends" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="36" type="method" name="getCountries" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="41" type="method" name="getBondCoupons" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="43" type="stmt" count="1"/>
+      <line num="46" type="method" name="getAssets" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="48" type="stmt" count="1"/>
+      <line num="51" type="method" name="findInstrument" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="56" type="method" name="bondBy" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="58" type="stmt" count="1"/>
+      <line num="61" type="method" name="requestMethod" visibility="private" complexity="1" crap="1" count="6"/>
+      <line num="63" type="stmt" count="6"/>
+      <metrics loc="70" ncloc="70" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="16" coveredelements="16"/>
     </file>
-    <metrics files="7" loc="181" ncloc="151" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="16" coveredelements="16"/>
+    <metrics files="7" loc="178" ncloc="148" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="16" coveredelements="16"/>
   </project>
 </coverage>
