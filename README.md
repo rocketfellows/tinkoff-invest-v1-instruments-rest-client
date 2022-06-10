@@ -23,6 +23,11 @@ Methods interfaces implementation aggregated in \rocketfellows\TinkoffInvestV1In
 
 For the sake of the interface segregation principle you should inject a specific interface as dependencies, and define the implementation through the container (DI).
 
+## Installation
+```shell
+composer require rocketfellows/tinkoff-invest-v1-instruments-rest-client
+```
+
 ## Methods contract definition
 
 Component methods take an array as parameters, and raw arrays also serve as output values.
