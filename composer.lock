@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "353b37ca2fb8d181e0f3c0603ed62f3f",
+    "content-hash": "fd2cffc05e24bf884d107ed942c08be4",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -535,16 +535,16 @@
         },
         {
             "name": "rocketfellows/tinkoff-invest-v1-rest-client",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rocketfellows/tinkoff-invest-v1-rest-client.git",
-                "reference": "99aa347a561590797d2312f53811f76290b10570"
+                "reference": "897a54e79076284d8b8cb1e4f2024ee2785e4ecd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rocketfellows/tinkoff-invest-v1-rest-client/zipball/99aa347a561590797d2312f53811f76290b10570",
-                "reference": "99aa347a561590797d2312f53811f76290b10570",
+                "url": "https://api.github.com/repos/rocketfellows/tinkoff-invest-v1-rest-client/zipball/897a54e79076284d8b8cb1e4f2024ee2785e4ecd",
+                "reference": "897a54e79076284d8b8cb1e4f2024ee2785e4ecd",
                 "shasum": ""
             },
             "require": {
@@ -574,9 +574,9 @@
             ],
             "support": {
                 "issues": "https://github.com/rocketfellows/tinkoff-invest-v1-rest-client/issues",
-                "source": "https://github.com/rocketfellows/tinkoff-invest-v1-rest-client/tree/v1.0.1"
+                "source": "https://github.com/rocketfellows/tinkoff-invest-v1-rest-client/tree/v1.0.2"
             },
-            "time": "2022-06-08T20:29:59+00:00"
+            "time": "2022-06-21T21:31:30+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
